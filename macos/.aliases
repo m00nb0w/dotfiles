@@ -1,12 +1,29 @@
+alias zshrc="vim ~/.zshrc"
+alias aliasrc="vim ~/.aliases"
+alias vimrc="vim ~/.vimrc"
+alias kittyrc="vim ~/.config/kitty.conf"
+alias cls='printf "\033c"'
+#
 alias axon="cd ~/OneDrive\ -\ Axon\ Enterprise/axon" 
 alias lto="cd ~/OneDrive\ -\ Axon\ Enterprise/personal"
 alias exer="lto && cd kaizen/exercism" 
 
 #Github
+alias g="git"
 alias gut="git"
 alias got="git"
-alias gper='git config --global user.email "tnlong1997@gmail.com" && git config --global user.name "tnlong1997"'
-alias gaxon='git config --global user.email "lto@axon.com" && git config --global user.name "lto"' 
+alias ga="git add"
+alias ga.="git add ."
+alias gum="git checkout master && git pull origin master"
+alias gc="git commit -m"
+alias gcu="git commit -m 'Update with comments'"
+alias gcw="git commit -m 'WIP'"
+alias gco="git checkout"
+alias gcom="git checkout master"
+alias gcob="git checkout -b"
+alias gpso="git push origin $(git branch --show-current)"
+alias gplo="git pull origin $(git branch --show-current)"
+alias gs="git status"
 
 #LastPass
 alias pag1='lpass show -c "vpn/ag1" --password'
@@ -43,5 +60,3 @@ alias startlbox='sudo salt-cloud -a start dus1uw2lbox420'
 alias startwbox='sudo salt-cloud -a start dus1uw2wbox420'
 alias restartServices='sudo systemctl start komrade-service && sudo systemctl start sessions-service && sudo systemctl start cassandra && sudo systemctl start audit-service && sudo systemctl start lantern'
 alias puppetSetup='sudo puppet agent --enable && sudo puppet agent -t --environment lto && sudo puppet agent -— disable'
-
-eval "$(direnv hook zsh)"
