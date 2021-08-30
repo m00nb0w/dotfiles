@@ -35,6 +35,9 @@ function __badwolf.init
   __badwolf.create_abbr axon              cd ~/repos/axon
   __badwolf.create_abbr mine              cd ~/repos/personal
 
+  # Bat
+  __badwolf.create_abbr cat               bat
+
   # Cleanup declared functions
   functions -e __badwolf.create_abbr 
 
