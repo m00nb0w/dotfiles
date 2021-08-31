@@ -38,6 +38,9 @@ function __badwolf.init
   # Bat
   __badwolf.create_abbr cat               bat
 
+  # Gping
+  __badwolf.create_abbr ping              gping
+
   # Cleanup declared functions
   functions -e __badwolf.create_abbr 
 
