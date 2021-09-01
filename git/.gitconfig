@@ -1,0 +1,19 @@
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[delta]
+    plus-style = "syntax #012800"
+    syntax-theme = Dracula
+    navigate = true
+	minus-style = "syntax #340001"
+	line-numbers = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[user]
+	email = lto@axon.com
+	name = lto
