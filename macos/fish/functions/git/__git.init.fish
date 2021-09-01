@@ -43,12 +43,12 @@ function __git.init
   __git.create_abbr gcav!      git commit -a -v --no-verify --amend
   __git.create_abbr gcm        git commit -m
   __git.create_abbr gcam       git commit -a -m
-  __git.create_abbr gcw        git commit -m "WIP"
-  __git.create_abbr gcu        git commit -m "Update with comments"
+  __git.create_abbr gcw        git commit -m "--WIP--"
+  __git.create_abbr gcu        git commit -m "--Update with comments--"
+  __git.create_abbr gcf        git commit -m "--Refactor--"
   __git.create_abbr gscam      git commit -S -a -m
   __git.create_abbr gcfx       git commit --fixup
 
-  __git.create_abbr gcf        git config --list
   __git.create_abbr gcl        git clone
   __git.create_abbr gclean     git clean -di
   __git.create_abbr gclean!    git clean -dfx

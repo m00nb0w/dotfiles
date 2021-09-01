@@ -11,3 +11,6 @@ set -x GOPATH $HOME/go
 
 # add the go bin path to be able to execute our programs
 set -x PATH $PATH $GOPATH/bin
+
+# Command history traversal
+mcfly init fish | source
