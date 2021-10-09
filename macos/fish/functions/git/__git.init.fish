@@ -180,6 +180,7 @@ function __git.init
 
   # My preference
   __git.create_abbr gum        "git checkout master; and git pull"
+  __git.create_abbr guma       "git checkout main; and git pull"
 
   __git.create_abbr gfp        git flow publish
 
