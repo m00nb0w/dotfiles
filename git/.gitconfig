@@ -13,7 +13,3 @@
 
 [interactive]
     diffFilter = delta --color-only
-
-[user]
-	email = lto@axon.com
-	name = lto
