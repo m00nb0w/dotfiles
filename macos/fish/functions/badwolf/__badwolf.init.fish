@@ -20,6 +20,7 @@ function __badwolf.init
   __badwolf.create_abbr pnl1              lpass show -c vpn/nl1 --password
   __badwolf.create_abbr puk2              lpass show -c vpn/uk2 --password
   __badwolf.create_abbr pbr1              lpass show -c vpn/br1 --password
+  __badwolf.create_abbr pla1               lpass show -c vpn/la1 --password
 
   # SSH
   __badwolf.create_abbr sshlnocdv1        ssh qus1uw2lnoc001
