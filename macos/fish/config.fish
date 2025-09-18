@@ -14,8 +14,3 @@ set -x PATH $PATH $GOPATH/bin
 
 # Command history traversal
 mcfly init fish | source
-
-# Twistlock 
-set -x TWISTLOCK_PASSWORD 'Axon@1993'
-set -x TWISTLOCK_USER 'lto@axon.com'
-set -x TWISTLOCK_CONSOLE 'https://console.twistlock.mgmt.tiis.io'

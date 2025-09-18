@@ -7,20 +7,17 @@ This repository contains my personal dotfiles and configuration files for settin
 2. VSCode
 
 ## Overview 
-1. **Kitty Terminal** - the fast, feature-rich, cross-platform, GPU based terminal
-2. **Fish Shell** - a smart and user-friendly command line shell
-3. **Git Setup** - install aliases relating to git
-4. **Edith Setup** - personal assistance on some tasks
-5. **Neovim Setup** - modern vim configuration
-6. **VSCode Setup**
+1. **Fish Shell Setup** - install and configure Fish as the default shell
+2. **Kitty Terminal** - the fast, feature-rich, cross-platform, GPU based terminal
+3. **Fish Shell Configuration** - add plugins and customize Fish shell
+4. **Git Setup** - install aliases relating to git
+5. **Edith Setup** - personal assistance on some tasks
+6. **Neovim Setup** - modern vim configuration
+7. **VSCode Setup**
 
 ## macOS Setup
 
-### 1. Kitty Terminal Setup
-1. Install Kitty: https://sw.kovidgoyal.net/kitty/binary/
-2. Copy configuration from https://github.com/m00nb0w/dotfiles/tree/master/macos/kitty to ~/.config/kitty 
-
-### 2. Fish Shell Setup
+### 1. Fish Shell Setup
 1. Install Fish using Homebrew: `brew install fish`
 2. Making Fish default shell
    
@@ -48,9 +45,9 @@ This repository contains my personal dotfiles and configuration files for settin
 
    (Replace the path if yours is different.)
 
-   2c. Verify the change
+   2c. Restart the machine
 
-   Log out and back in, or open a new terminal. Then check:
+   Restart your Mac to ensure the shell change is properly applied. After restart, open a new terminal and check:
 
    ```bash
    echo $SHELL
@@ -61,23 +58,52 @@ This repository contains my personal dotfiles and configuration files for settin
    ```
    /opt/homebrew/bin/fish
    ```
-3. Install the manager plugins - fisher: https://github.com/jorgebucaran/fisher
-4. Install direnv - per directory environment plugin: `brew install direnv`
-5. Install mcfly - command history traversal: `brew install mcfly`
-6. Install neofetch - load icon at startup: `brew install neofetch`
-7. Copy the config from https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/config.fish to your fish config file
-8. Install the styling for fish shell:
-   * There are two options - either [tide](https://github.com/IlanCosman/tide) or [spaceship](https://github.com/matchai/spacefish)
-9. Add `install.sh` script to help install fish's functions following this example: https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/install.sh
-10. Add `update.sh` script to help update fish's functions following this example: 
 
-### 3. Git Setup
+### 2. Kitty Terminal Setup
+1. Install Kitty: https://sw.kovidgoyal.net/kitty/binary/
+2. Copy configuration from https://github.com/m00nb0w/dotfiles/tree/master/macos/kitty to ~/.config/kitty 
+
+### 3. Fish Shell Configuration
+1. Install the manager plugins - fisher: https://github.com/jorgebucaran/fisher
+2. Install mcfly - command history traversal: `brew install mcfly`
+3. Install neofetch - load icon at startup: `brew install neofetch`
+
+   Neofetch displays system information with a custom ASCII art logo when you open a new terminal. It shows:
+   - System details (OS, CPU, memory, uptime)
+   - Custom ASCII art logo (like a stylized Apple logo for macOS)
+   - Terminal color palette
+   - Current shell and terminal information
+   
+   This creates a nice visual welcome screen every time you open a new terminal session.
+
+4. Copy the config from https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/config.fish to your fish config file
+5. Install the styling for fish shell:
+   * There are two options - either [tide](https://github.com/IlanCosman/tide) or [spaceship](https://github.com/matchai/spacefish)
+6. Add `install.sh` script to help install fish's functions following this example: https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/install.sh
+7. Add `update.sh` script to help update fish's functions following this example: 
+
+### 4. Git Setup
 1. Copy https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/conf.d/git.fish to `config.d` folder 
 2. Copy https://github.com/m00nb0w/dotfiles/tree/master/macos/fish/functions/git to `functions/git` folder 
 3. Make sure `_git_install` is added to `install.sh`
 4. Run `./install.sh` to install git-related functions/aliases
 5. [Optional] Make sure `_git_update` is added to `update.sh` for later update
 
-### 4. [Optional] Neovim Setup
+### 5. [Optional] Neovim Setup
 
-### 5. VSCode Setup
+### 6. [Optional] Direnv Setup
+
+Direnv is a tool that automatically loads and unloads environment variables depending on the current directory. It's particularly useful for:
+
+- **Project-specific environments**: Automatically set environment variables when entering a project directory
+- **Development tools**: Load different versions of tools (Node.js, Python, etc.) per project
+- **API keys and secrets**: Keep sensitive data in `.envrc` files that are automatically loaded
+- **Database connections**: Set database URLs and credentials per project
+
+To install and configure direnv:
+
+1. Install direnv: `brew install direnv`
+2. Add direnv hook to your Fish shell configuration
+3. Create `.envrc` files in your project directories with the environment variables you need
+
+### 7. VSCode Setup
