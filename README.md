@@ -66,21 +66,31 @@ This repository contains my personal dotfiles and configuration files for settin
 ### 3. Fish Shell Configuration
 1. Install the manager plugins - fisher: https://github.com/jorgebucaran/fisher
 2. Install mcfly - command history traversal: `brew install mcfly`
+
+   Mcfly provides intelligent command history search with machine learning-powered suggestions.
+
 3. Install neofetch - load icon at startup: `brew install neofetch`
 
-   Neofetch displays system information with a custom ASCII art logo when you open a new terminal. It shows:
-   - System details (OS, CPU, memory, uptime)
-   - Custom ASCII art logo (like a stylized Apple logo for macOS)
-   - Terminal color palette
-   - Current shell and terminal information
-   
-   This creates a nice visual welcome screen every time you open a new terminal session.
+   Neofetch displays system information with a custom ASCII art logo when you open a new terminal, creating a nice visual welcome screen.
 
-4. Copy the config from https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/config.fish to your fish config file
-5. Install the styling for fish shell:
-   * There are two options - either [tide](https://github.com/IlanCosman/tide) or [spaceship](https://github.com/matchai/spacefish)
-6. Add `install.sh` script to help install fish's functions following this example: https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/install.sh
-7. Add `update.sh` script to help update fish's functions following this example: 
+4. Install direnv - per directory environment plugin: `brew install direnv`
+
+   Direnv automatically loads and unloads environment variables based on the current directory, perfect for project-specific configurations.
+
+5. Copy the config from https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/config.fish to your fish config file
+6. Install the styling for fish shell - Tide:
+
+   Install [Tide](https://github.com/IlanCosman/tide) for a modern, fast, and customizable prompt:
+
+   ```bash
+   fisher install IlanCosman/tide@v5
+   ```
+
+   <img src="./images/terminal-example.png" alt="Tide Prompt Example" width="600">
+
+   *Note: This shows the Tide prompt with neofetch output, git status (master branch with uncommitted changes), directory path (~/repos/personal/dotfiles), exit codes, and colorful segmented styling*
+7. Add `install.sh` script to help install fish's functions following this example: https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/install.sh
+8. Add `update.sh` script to help update fish's functions following this example: 
 
 ### 4. Git Setup
 1. Copy https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/conf.d/git.fish to `config.d` folder 
@@ -91,19 +101,4 @@ This repository contains my personal dotfiles and configuration files for settin
 
 ### 5. [Optional] Neovim Setup
 
-### 6. [Optional] Direnv Setup
-
-Direnv is a tool that automatically loads and unloads environment variables depending on the current directory. It's particularly useful for:
-
-- **Project-specific environments**: Automatically set environment variables when entering a project directory
-- **Development tools**: Load different versions of tools (Node.js, Python, etc.) per project
-- **API keys and secrets**: Keep sensitive data in `.envrc` files that are automatically loaded
-- **Database connections**: Set database URLs and credentials per project
-
-To install and configure direnv:
-
-1. Install direnv: `brew install direnv`
-2. Add direnv hook to your Fish shell configuration
-3. Create `.envrc` files in your project directories with the environment variables you need
-
-### 7. VSCode Setup
+### 6. VSCode Setup
