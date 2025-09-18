@@ -10,10 +10,6 @@ This repository contains my personal dotfiles and configuration files for settin
 1. **Fish Shell Setup** - install and configure Fish as the default shell
 2. **Kitty Terminal** - the fast, feature-rich, cross-platform, GPU based terminal
 3. **Fish Shell Configuration** - add plugins and customize Fish shell
-4. **Git Setup** - install aliases relating to git
-5. **Edith Setup** - personal assistance on some tasks
-6. **Neovim Setup** - modern vim configuration
-7. **VSCode Setup**
 
 ## macOS Setup
 
@@ -89,16 +85,5 @@ This repository contains my personal dotfiles and configuration files for settin
    <img src="./images/terminal-example.png" alt="Tide Prompt Example" width="600">
 
    *Note: This shows the Tide prompt with neofetch output, git status (master branch with uncommitted changes), directory path (~/repos/personal/dotfiles), exit codes, and colorful segmented styling*
-7. Add `install.sh` script to help install fish's functions following this example: https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/install.sh
-8. Add `update.sh` script to help update fish's functions following this example: 
 
-### 4. Git Setup
-1. Copy https://github.com/m00nb0w/dotfiles/blob/master/macos/fish/conf.d/git.fish to `config.d` folder 
-2. Copy https://github.com/m00nb0w/dotfiles/tree/master/macos/fish/functions/git to `functions/git` folder 
-3. Make sure `_git_install` is added to `install.sh`
-4. Run `./install.sh` to install git-related functions/aliases
-5. [Optional] Make sure `_git_update` is added to `update.sh` for later update
-
-### 5. [Optional] Neovim Setup
-
-### 6. VSCode Setup
+7. Loading the Fish config by copy everything under fish folder to your `.config/fish` - also note that this will be automatically sync, don't worry. After copying, run the `initial_setup.sh` script 
